@@ -1,0 +1,67 @@
+mortgage:
+  liborRate: 0.61
+  lenderFixedRate: 3.49
+  lenderTrackerRate: 2.50
+  platformFeeRate: 1.00
+
+###
+#   Database Settings
+###
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    jdbcUrl: jdbc:h2:mem:mortgage;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    username: sa
+    password: test
+    driverClassName: org.h2.Driver
+    hikari:
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+      connection-timeout: 60000
+      maximum-pool-size: 5
+      connection-test-query: SELECT 1
+      minimum-idle: 1
+      pool-name: HikariThread
+      auto-commit: false
+  jpa:
+    database: default
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+        c3p0:
+          max_size: 15
+          min_size: 6
+          timeout: 2500
+          max_statements_per_connection: 10
+          idle_test_period: 3000
+          acquire_increment: 3
+          validate: false
+          numHelperThreads: 15
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null
+
+
+flyway:
+  baselineOnMigrate: true
+
+logging:
+  pattern:
+      console: '%-5p|%date{ISO8601}|%X{Slf4jMDCFilter.UUID}|%thread|%logger{36}.%M|%m%ex%n'
+
+
+
+
+
+
