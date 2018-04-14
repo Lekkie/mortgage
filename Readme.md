@@ -4,8 +4,8 @@ Mortage app is a BTL mortgage application
 
 Requirements
 ===========
--- Jdk 8
--- Maven
+1. Download & install Jdk 8
+2. Download & install Maven
 
 
 
@@ -146,7 +146,7 @@ HTTP 200
          "loanId":1,
          "lenderId":1,
          "amount":10000.00,
-         "termsInMonths":24
+         "termsInMonths":1
       }
    ]
 }
@@ -187,7 +187,7 @@ HTTP 200
    "loanId":1,
    "lenderId":1,
    "amount":10000,
-   "termsInMonths":24
+   "termsInMonths":1
 }
 ```
 
@@ -203,7 +203,7 @@ Response:
  ```
 HTTP 200
 {  
-   "amount":698.0
+   "amount":29.08
 }
 ```
 
@@ -212,7 +212,7 @@ Get Lender Interest within a range
 ----------------------------------
 Request:  
 ```
-CURL -X GET "http://localhost:8080/api/v1/lenders/1/interests?startDate=2018-02-01&endDate=2018-04-30"
+CURL -X GET "http://localhost:8080/api/v1/lenders/1/interests?startDate=2018-03-01&endDate=2018-03-31"
 ```
 
 -- add interests rate
@@ -220,6 +220,6 @@ Response:
  ```
 HTTP 200
 {  
-   "amount":168.28
+   "amount":26.68
 }
 ```
