@@ -16,6 +16,7 @@ import javax.persistence.*;
 public class NationalityType extends BaseEntity  {
 
     @Id
+    @Column(name = "nationality_type_id")
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long nationalityTypeId;
     @Column(name = "nationality_type_code", nullable = false, unique = false)

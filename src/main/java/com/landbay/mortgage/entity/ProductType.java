@@ -17,6 +17,7 @@ import java.util.Date;
 public class ProductType extends BaseEntity  {
 
     @Id
+    @Column(name = "product_type_id")
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long productTypeId;
     @Column(name = "product_type_code", nullable = false, unique = false)

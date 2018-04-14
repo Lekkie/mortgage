@@ -14,6 +14,7 @@ import com.landbay.mortgage.type.End2EndTest;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -60,6 +61,10 @@ public class InvestmentControllerRestE2ETest {
     public void setup() throws Exception {
     }
 
+    @After
+    public void tearDown() throws Exception {
+        loanInvestmentService.deleteAll();
+    }
 
 
     @Test

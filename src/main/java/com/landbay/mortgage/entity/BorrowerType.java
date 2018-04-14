@@ -17,6 +17,7 @@ import java.util.Date;
 public class BorrowerType extends BaseEntity  {
 
     @Id
+    @Column(name = "borrower_type_id")
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long borrowerTypeId;
     @Column(name = "borrower_type_code", nullable = false, unique = false)

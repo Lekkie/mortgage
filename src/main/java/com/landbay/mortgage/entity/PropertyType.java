@@ -17,6 +17,7 @@ import java.util.Date;
 public class PropertyType extends BaseEntity {
 
     @Id
+    @Column(name = "property_type_id")
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long propertyTypeId;
     @Column(name = "property_type_code", nullable = false, unique = false)

@@ -84,6 +84,7 @@ public class LoanInvestment extends BaseEntity {
         this.termsInMonths = termsInMonths;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -121,6 +122,7 @@ public class LoanInvestment extends BaseEntity {
         private Integer termsInMonths;
         private String createdBy;
         private Date createdOn;
+        private double interestRate;
 
 
         public Builder loanInvestmentId(Long val){
@@ -141,6 +143,10 @@ public class LoanInvestment extends BaseEntity {
         }
         public Builder termsInMonths(Integer val){
             termsInMonths = val;
+            return this;
+        }
+        public Builder interestRate(Integer val){
+            interestRate = val;
             return this;
         }
         public Builder createdBy(String val){

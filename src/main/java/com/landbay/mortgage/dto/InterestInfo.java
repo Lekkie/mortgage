@@ -16,8 +16,6 @@ public final class InterestInfo{
     }
 
 
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -31,7 +29,6 @@ public final class InterestInfo{
     public int hashCode() {
         int result = 17;
         result = 31 * result + ((int) ((Double.doubleToLongBits(amount)) ^ (Double.doubleToLongBits(amount)) >>> 32));
-
         return result;
     }
 

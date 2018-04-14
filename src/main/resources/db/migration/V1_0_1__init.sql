@@ -1,24 +1,24 @@
 -- Property Type seed data
-INSERT INTO tbl_property_types (property_type_code, property_type_name, description, created_by, created_on) VALUES ('STA', 'Standard', 'Standard Property', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_property_types (property_type_code, property_type_name, description, created_by, created_on) VALUES ('SMALL_HMO', 'Small HMO', 'Small Houses in Multiple Occupation Property', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_property_types (property_type_code, property_type_name, description, created_by, created_on) VALUES ('LARGE_HMO', 'Large HMO', 'Large Houses in Multiple Occupation Property', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_property_types (property_type_code, property_type_name, description, created_by, created_on) VALUES ('SMALL_MUFB', 'Small MUFB', 'Small Multi-Unit Freehold Block Property', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_property_types (property_type_code, property_type_name, description, created_by, created_on) VALUES ('LARGE_MUFB', 'Large MUFB', 'Large Multi-Unit Freehold Block Property', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_property_types (property_type_id, property_type_code, property_type_name, description, created_by, created_on) VALUES (1, 'STA', 'Standard', 'Standard Property', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_property_types (property_type_id, property_type_code, property_type_name, description, created_by, created_on) VALUES (2, 'SMALL_HMO', 'Small HMO', 'Small Houses in Multiple Occupation Property', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_property_types (property_type_id, property_type_code, property_type_name, description, created_by, created_on) VALUES (3, 'LARGE_HMO', 'Large HMO', 'Large Houses in Multiple Occupation Property', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_property_types (property_type_id, property_type_code, property_type_name, description, created_by, created_on) VALUES (4, 'SMALL_MUFB', 'Small MUFB', 'Small Multi-Unit Freehold Block Property', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_property_types (property_type_id, property_type_code, property_type_name, description, created_by, created_on) VALUES (5, 'LARGE_MUFB', 'Large MUFB', 'Large Multi-Unit Freehold Block Property', 'System', CURRENT_TIMESTAMP());
 
 -- Borrower Type seed data
-INSERT INTO tbl_borrower_types (borrower_type_code, borrower_type_name, description, created_by, created_on) VALUES ('IND', 'Individual', 'Individual Owner', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_borrower_types (borrower_type_code, borrower_type_name, description, created_by, created_on) VALUES ('LTD', 'Limited Company', 'Limited Company Owner', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_borrower_types (borrower_type_code, borrower_type_name, description, created_by, created_on) VALUES ('SPV', 'Limited Liability Partnership', 'Limited Liability Partnership Owner', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_borrower_types (borrower_type_id, borrower_type_code, borrower_type_name, description, created_by, created_on) VALUES (1, 'IND', 'Individual', 'Individual Owner', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_borrower_types (borrower_type_id, borrower_type_code, borrower_type_name, description, created_by, created_on) VALUES (2, 'LTD', 'Limited Company', 'Limited Company Owner', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_borrower_types (borrower_type_id, borrower_type_code, borrower_type_name, description, created_by, created_on) VALUES (3, 'SPV', 'Limited Liability Partnership', 'Limited Liability Partnership Owner', 'System', CURRENT_TIMESTAMP());
 
 -- Borrower Type seed data
-INSERT INTO tbl_nationality_types (nationality_type_code, nationality_type_name, description, created_by, created_on) VALUES ('CIT', 'British Citizen', 'British Citizens', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_nationality_types (nationality_type_code, nationality_type_name, description, created_by, created_on) VALUES ('EXPAT', 'Expatriate', 'Expatriate - Non- British nationals', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_nationality_types (nationality_type_id, nationality_type_code, nationality_type_name, description, created_by, created_on) VALUES (1, 'CIT', 'British Citizen', 'British Citizens', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_nationality_types (nationality_type_id, nationality_type_code, nationality_type_name, description, created_by, created_on) VALUES (2, 'EXPAT', 'Expatriate', 'Expatriate - Non- British nationals', 'System', CURRENT_TIMESTAMP());
 
 -- Rate Type seed data
-INSERT INTO tbl_product_types (product_type_code, product_type_name, description, created_by, created_on) VALUES ('FRY2', '2 Fixed Rate Years', 'Fixed rate for 2 years', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_product_types (product_type_code, product_type_name, description, created_by, created_on) VALUES ('FRY3', '3 Fixed Rate Years', 'Fixed rate for 3 years', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_product_types (product_type_code, product_type_name, description, created_by, created_on) VALUES ('FRY5', '5 Fixed Rate Years', 'Fixed rate for 5 years', 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_product_types (product_type_code, product_type_name, description, created_by, created_on) VALUES ('TRA', 'Tracker Rate', 'Tracker rate', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_product_types (product_type_id, product_type_code, product_type_name, description, created_by, created_on) VALUES (1, 'FRY2', '2 Fixed Rate Years', 'Fixed rate for 2 years', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_product_types (product_type_id, product_type_code, product_type_name, description, created_by, created_on) VALUES (2, 'FRY3', '3 Fixed Rate Years', 'Fixed rate for 3 years', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_product_types (product_type_id, product_type_code, product_type_name, description, created_by, created_on) VALUES (3, 'FRY5', '5 Fixed Rate Years', 'Fixed rate for 5 years', 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_product_types (product_type_id, product_type_code, product_type_name, description, created_by, created_on) VALUES (4, 'TRA', 'Tracker Rate', 'Tracker rate', 'System', CURRENT_TIMESTAMP());
 
 -- Rental Coverage seed data
 INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (1, 1, 1, 140, 'System', CURRENT_TIMESTAMP());
@@ -66,21 +66,21 @@ INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_ty
 INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 3, 3, 130, 'System', CURRENT_TIMESTAMP());
 INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 3, 4, 130, 'System', CURRENT_TIMESTAMP());
 INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 3, 5, 130, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 1, 1, 140, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 1, 2, 140, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 1, 3, 140, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 1, 4, 140, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 1, 5, 140, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 2, 1, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 2, 2, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 2, 3, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 2, 4, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 2, 5, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 3, 1, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 3, 2, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 3, 3, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 3, 4, 125, 'System', CURRENT_TIMESTAMP());
-INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (3, 3, 5, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 1, 1, 140, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 1, 2, 140, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 1, 3, 140, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 1, 4, 140, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 1, 5, 140, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 2, 1, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 2, 2, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 2, 3, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 2, 4, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 2, 5, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 3, 1, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 3, 2, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 3, 3, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 3, 4, 125, 'System', CURRENT_TIMESTAMP());
+INSERT INTO tbl_rental_coverages (product_type_id, borrower_type_id, property_type_id, rental_coverage, created_by, created_on) VALUES (4, 3, 5, 125, 'System', CURRENT_TIMESTAMP());
 
 
 -- Loan Products

@@ -72,27 +72,27 @@ CURL -0 -v -X POST -H "Content-Type:application/json" http://localhost:8080/api/
   "borrowerTypeCode":"IND",
   "borrowerFirstname": "James",  
   "borrowerLastname": "Watson",  
-  "borrowerSalary": "90000",  
+  "borrowerSalary": 90000,  
   "borrowerNationality": "Nigerian",  
-  "borrowerAge": "33",  
+  "borrowerAge": 33,  
   "borrowerFirstTimeLandlord": false,  
   "borrowerFirstTimeBuyer": false,  
   "borrowerActiveBankAccount": true,  
   "borrowerUkCreditHistory": true,  
   "goodCreditInLastYear": true,  
-  "haveMinimumDeposit":"true", 
+  "haveMinimumDeposit":true, 
   "propertyTypeCode": "STA",  
   "propertyTypeName": "House - Semi",  
-  "propertyBeds": "4",  
-  "propertyValue": "250000",  
-  "propertyMonthlyRent": "1200",
+  "propertyBeds": 4,  
+  "propertyValue": 250000,  
+  "propertyMonthlyRent": 1200,
   "propertyPostcode": "MK40",  
   "propertyCounty": "Bedford",  
-  "satisfyAssessmentThreshold":"true",
-  "propertyCloseByCommercial":"false",
+  "satisfyAssessmentThreshold":true,
+  "propertyCloseByCommercial":false,
   "productCode": "EXPAT_FRY5_70",  
   "loanPurpose": "Purchase",  
-  "loanTenureInMonths": "300"
+  "loanTenureInMonths": 300
 }
 EOF
 ```
@@ -101,12 +101,11 @@ Response:
 ```
 HTTP 201
 {  
-   "loanId":1,
-   "loanAmount":187500.0,
-   "borrowerRate":3.09,
-   "ltv":75.0,
+   "loanAmount":175000.0,
+   "borrowerRate":4.99,
+   "ltv":70.0,
    "rentalCoverage":140.0,
-   "monthlyRepayment":900.94
+   "monthlyRepayment":1027.11
 }
 ```
 
@@ -128,37 +127,26 @@ HTTP 200
    "beds":4,
    "propertyValue":250000.0,
    "monthlyRent":1200.0,
-   "product":"Standard 2 Year Fixed, 75 LTV",
+   "product":"Expat 5 Year Fixed, 70 LTV",
    "purpose":"Purchase",
-   "loanAmount":187500.0,
-   "borrowerRate":3.09,
+   "loanAmount":175000.0,
+   "borrowerRate":4.99,
    "lenderRate":3.49,
-   "ltv":75.0,
+   "ltv":70.0,
    "tenureInMonths":300,
-   "completionDate":"2043-04-12 00:00:00.0",
+   "completionDate":"2043-04-14 00:00:00",
    "rentalCoverage":140.0,
-   "productType":"2 Fixed Rate Years",
+   "productType":"5 Fixed Rate Years",
    "propertyType":"Standard",
    "borrowerType":"Individual",
-   "monthlyRepayment":900.94,
+   "monthlyRepayment":1027.11,
    "investments":[  
       {  
-         "createdOn":"2018-04-12 19:26:13",
-         "createdBy":"System",
          "loanInvestmentId":1,
          "loanId":1,
          "lenderId":1,
          "amount":10000.00,
-         "termsInMonths":"1"
-      },
-      {  
-         "createdOn":"2018-04-12 19:26:22",
-         "createdBy":"System",
-         "loanInvestmentId":2,
-         "loanId":1,
-         "lenderId":1,
-         "amount":10000.00,
-         "termsInMonths":"1"
+         "termsInMonths":24
       }
    ]
 }
@@ -184,11 +172,10 @@ Request:
 CURL -0 -v -X POST -H "Content-Type:application/json" http://localhost:8080/api/v1/investments  \
 -d @- << EOF
 {  
-    "lenderId": "1",
-    "amount": "10000",
-    "startDate": "2018-04-16",
-    "endDate": "2020-04-16",
-    "autoInvest": "false"
+    "lenderId": 1,
+    "loanId": 1,
+    "amount": 10000,
+    "termInMonths": 1
 }
 EOF
 ```
@@ -197,15 +184,10 @@ Response:
  ```
 HTTP 200
 {  
-   "createdOn":"2018-04-12 19:07:55",
-   "createdBy":"System",
-   "loanInvestmentId":1,
    "loanId":1,
    "lenderId":1,
    "amount":10000,
-   "startDate":"2018-04-16 00:00:00",
-   "endDate":"2020-04-16 00:00:00",
-   "autoInvest":false
+   "termsInMonths":24
 }
 ```
 
@@ -221,7 +203,7 @@ Response:
  ```
 HTTP 200
 {  
-   "amount":319.92
+   "amount":698.0
 }
 ```
 
@@ -233,6 +215,7 @@ Request:
 CURL -X GET "http://localhost:8080/api/v1/lenders/1/interests?startDate=2018-02-01&endDate=2018-04-30"
 ```
 
+-- add interests rate
 Response: 
  ```
 HTTP 200
