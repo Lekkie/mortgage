@@ -69,7 +69,7 @@ monthly, interest should be calculated using unpaid capital, but that is not cov
 * "....Lender investment into a loan (create)....."  It will be nice to be able to spread investment across 
 multiple loans. But the scope of this test will be limited to putting an investment into a suitable 
 (pre-identified) loan.
-* The selection of loan to invest in is not implemented. It is assumed some selection model is created in 
+* The selection of loan to invest in is not implemented. It is assumed some selection model is used in 
 choosing the best loan for each investment. To keep this test simple, it has been left out.
 * Interest calculation service does not factor in paid capital (it calculates interest on invested capital) 
 when calculating interests. Ideally, lender's interest should be calculated on unpaid lender's capital.
