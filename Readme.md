@@ -68,7 +68,7 @@ when lenders do not re-invest their interest. Since a part of the investment int
 monthly, interest should be calculated using unpaid capital, but that is not covered in the scope of this test.
 * "....Lender investment into a loan (create)....."  It will be nice to be able to spread investment across 
 multiple loans. But the scope of this test will be limited to putting an investment into a suitable 
-(pre-identifeid) loan. Note, in order to be able to get owed interests, for monthly interests your investment 
+(pre-identified) loan. Note, in order to be able to get owed interests, for monthly interests your investment 
 must be more than 1 month old while for daily interests your investment must be more than 1day old.
 * The selection of loan to invest in is not implemented. It is assumed some selection model is created in 
 choosing the best loan for each investment. To keep this test simple, it has been left out.
