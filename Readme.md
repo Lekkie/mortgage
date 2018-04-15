@@ -65,8 +65,7 @@ to a loan.
 * ".....Assuming all investments are valid for 1 month......"  I interpreted this statement to mean, only 
 calculate investment interest for 1 month at a time since interest are paid into a separate account monthly 
 when lenders do not re-invest their interest. Since a part of the investment interest and capital are paid 
-monthly, interest for last month should be calculated using unpaid capital, but that is not covered in the 
-scope of this test.
+monthly, interest should be calculated using unpaid capital, but that is not covered in the scope of this test.
 * "....Lender investment into a loan (create)....."  It will be nice to be able to spread investment across 
 multiple loans. But the scope of this test will be limited to putting an investment into a suitable 
 (pre-identifeid) loan. Note, in order to be able to get owed interests, for monthly interests your investment 
