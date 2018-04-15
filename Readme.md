@@ -55,19 +55,26 @@ How to push docker image to repository
 Assumptions
 ===========
 * Lenders have already been pre-registered on the platform 
-* Each Loan has same interest rate for different lenders i.e. no multiple interest on same loan from different lenders
-Background checks has been made on the borrower  
+* Each Loan has same interest rate for different lenders i.e. no multiple interest on same loan from different 
+lenders background checks has been made on the borrower.  
 * A better strategy should be used in selecting loans for borrower. For test purpose, the application did not 
-implement a loan selection strategy for lenders, it expects a loan id when creating an investment and linking to 
-a loan.
+implement a loan selection strategy for lenders, it expects a loan id when creating an investment and linking 
+to a loan.
  * Interest rate for different lenders is also out of the scope of this test application. A single flat value 
 (stored in properties file) is used for all lenders.
-* ".....Assuming all investments are valid for 1 month......"  I interpreted this statement to mean, only calculate investment interest for 1 month at a time since interest are paid into a separate account monthly when lenders do not re-invest their interest.  
-Since a part of the investInterest is or capital is paid monthly, interest for last month is calculated using unpaid capital.
-* "....Lender investment into a loan (create)....."  It will be nice to be able to spread investment across multiple loans. But the scope of this test will be limited to putting an investment into a suitable loan  
-Note, in order to be able to get owed interests, for monthly interests your investment must be more than 1 month old while for daily interests your investment must be more than 1day old.
-* The selection of loan to invest in is not implemented. It is assumed some selection model is created in choosing the best loan for each investment. To keep this test simple, it has been left out.
-* Interest calculation service does not factor in paid capital (it calculates interest on invested capital) when calculating interests. Ideally, lender's interest should be calculated on unpaid lender's capital.
+* ".....Assuming all investments are valid for 1 month......"  I interpreted this statement to mean, only 
+calculate investment interest for 1 month at a time since interest are paid into a separate account monthly 
+when lenders do not re-invest their interest. Since a part of the investment interest and capital are paid 
+monthly, interest for last month should be calculated using unpaid capital, but that is not covered in the 
+scope of this test.
+* "....Lender investment into a loan (create)....."  It will be nice to be able to spread investment across 
+multiple loans. But the scope of this test will be limited to putting an investment into a suitable 
+(pre-identifeid) loan. Note, in order to be able to get owed interests, for monthly interests your investment 
+must be more than 1 month old while for daily interests your investment must be more than 1day old.
+* The selection of loan to invest in is not implemented. It is assumed some selection model is created in 
+choosing the best loan for each investment. To keep this test simple, it has been left out.
+* Interest calculation service does not factor in paid capital (it calculates interest on invested capital) 
+when calculating interests. Ideally, lender's interest should be calculated on unpaid lender's capital.
 
 
 
