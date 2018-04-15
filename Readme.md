@@ -39,8 +39,8 @@ How to run End to End tests
  mvn clean verify -P End2EndTests
 ```
 
-How to build
-============
+How to build Docker image
+=========================
 ```shell
  ./docker-build.sh
 ```
