@@ -12,6 +12,9 @@ backup/
 /out-tsc
 /target
 /build
+/docker/*.yml
+/docker/*.jar
+
 
 # dependencies
 /node_modules

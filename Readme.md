@@ -39,6 +39,18 @@ How to run End to End tests
  mvn clean verify -P End2EndTests
 ```
 
+How to build
+============
+```shell
+ ./docker-build.sh
+```
+
+How to push docker image to repository
+======================================
+```shell
+ ./docker-push.sh
+```
+
 
 Assumptions
 ===========
